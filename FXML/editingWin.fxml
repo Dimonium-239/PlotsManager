@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="244.0" prefWidth="250.0" stylesheets="@Styles/MainPane.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Code.EditingWinController">
+   <center>
+      <GridPane prefHeight="195.0" prefWidth="252.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="125.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="484.0" minWidth="10.0" prefWidth="125.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Link">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="City" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="District" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Price" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Area" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Km from centre" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="linkEdField" GridPane.columnIndex="1" />
+            <TextField fx:id="cityEdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="districtEdField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="priceEdField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="areaEdField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="kmFromEdField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Street" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="streetEdField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#discard" prefHeight="26.0" prefWidth="309.0" text="Discard" />
+            <Button mnemonicParsing="false" onAction="#accept" prefHeight="26.0" prefWidth="344.0" text="Accept" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

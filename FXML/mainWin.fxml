@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane maxHeight="1080.0" maxWidth="1920.0" minHeight="480.0" minWidth="720.0" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Styles/MainPane.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Code.MainWinController">
+   <left>
+      <GridPane prefHeight="663.0" prefWidth="249.0" BorderPane.alignment="CENTER">
+        <rowConstraints>
+            <RowConstraints maxHeight="271.0" minHeight="-Infinity" prefHeight="237.0" />
+            <RowConstraints minHeight="7.0" prefHeight="430.0" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="242.0" prefWidth="246.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="16.0" prefWidth="101.0" text="Link:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Hyperlink fx:id="hyperlink" onAction="#hyper" prefHeight="24.0" prefWidth="150.0" text="Hyperlink" GridPane.columnIndex="1" />
+                  <Label text="City:" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="cityField" editable="false" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="District:" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="districtField" editable="false" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="street" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="streetField" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label prefHeight="16.0" prefWidth="107.0" text="Price[zł]:" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="priceField" editable="false" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label prefHeight="16.0" prefWidth="99.0" text="Area[m^2]:" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="areaField" editable="false" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="Price per m^2" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="pricePerField" editable="false" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label fx:id="kmFromLab" text="Km from centre:" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="kmFromField" editable="false" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <TabPane maxWidth="1.7976931348623157E308" minHeight="190.0" prefHeight="368.0" prefWidth="246.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+              <tabs>
+                <Tab text="Choose city">
+                  <content>
+                    <ScrollPane maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="397.0" prefWidth="261.0">
+                           <content>
+                              <GridPane minHeight="190.0" prefHeight="462.0" prefWidth="226.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="27.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <CheckBox fx:id="allCitiesBox" mnemonicParsing="false" onAction="#allCitiesBox" text="All cities" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox fx:id="warszawaBox" mnemonicParsing="false" onAction="#warszawaBox" text="Warszawa" GridPane.rowIndex="7">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="krakowBox" mnemonicParsing="false" onAction="#krakowBox" text="Kraków" GridPane.rowIndex="8">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="lodzBox" mnemonicParsing="false" onAction="#lodzBox" text="Łódz" GridPane.rowIndex="9">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="bydgoszczBox" mnemonicParsing="false" onAction="#bydgoszczBox" text="Bydgoszcz" GridPane.rowIndex="10">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="katowiceBox" mnemonicParsing="false" onAction="#katowiceBox" text="Katowice" GridPane.rowIndex="11">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="poznanBox" mnemonicParsing="false" onAction="#poznanBox" text="Poznan" GridPane.rowIndex="12">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="bialystokBox" mnemonicParsing="false" onAction="#bialystokBox" text="Białystok" GridPane.rowIndex="13">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="gdyniaBox" mnemonicParsing="false" onAction="#gdyniaBox" text="Gdynia" GridPane.rowIndex="14">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="gdanskBox" mnemonicParsing="false" onAction="#gdanskBox" text="Gdansk" GridPane.rowIndex="15">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="wroclawBox" mnemonicParsing="false" onAction="#wroclawBox" text="Wrocław" GridPane.rowIndex="16">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="szecinBox" mnemonicParsing="false" onAction="#szecinBox" text="Szczecin" GridPane.rowIndex="18">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="checkAllBox" mnemonicParsing="false" onAction="#checkAll" text="Check all cities" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="lublinBox" mnemonicParsing="false" onAction="#lublinBox" text="Lublin" GridPane.rowIndex="17">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
+                                    <Line endX="124.5" startX="-100.0" GridPane.rowIndex="5" />
+                                    <RadioButton mnemonicParsing="false" text="Area/Price" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="(Price/m^2)/Km from centre" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin>
+                                    </RadioButton>
+                                 </children>
+                              </GridPane>
+                           </content></ScrollPane>
+                  </content>
+                </Tab>
+                <Tab text="Data filter">
+                    <GridPane maxHeight="404.0" minHeight="80.0" prefHeight="404.0" prefWidth="246.0" style="-fx-background-color: #3c3c3c;">
+                        <rowConstraints>
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                           <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="26.0" />
+                           <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="23.0" />
+                           <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" />
+                        </rowConstraints>
+                        <columnConstraints>
+                           <ColumnConstraints maxWidth="134.0" minWidth="50.0" prefWidth="52.0" />
+                           <ColumnConstraints maxWidth="194.0" minWidth="50.0" prefWidth="194.0" />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <children>
+                           <Label text="Price" GridPane.rowIndex="1">
+                              <GridPane.margin>
+                                 <Insets left="16.0" />
+                              </GridPane.margin>
+                           </Label>
+                           <Label text="Area" GridPane.rowIndex="3">
+                              <GridPane.margin>
+                                 <Insets left="16.0" />
+                              </GridPane.margin>
+                           </Label>
+                           <CheckBox fx:id="enableFiltres" mnemonicParsing="false" text="Enable filtres" GridPane.columnIndex="1" />
+                           <Slider fx:id="priceSlider" onMouseDragged="#priceSliderDrag" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <Slider fx:id="areaSlider" onMouseDragged="#areaSliderDrag" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           <Label fx:id="priceLabelShow" prefHeight="16.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <Label fx:id="areaLabelShow" maxHeight="1.7976931348623157E308" prefHeight="400.0" prefWidth="194.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        </children></GridPane>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+      </GridPane>
+   </left>
+   <right>
+      <TableView fx:id="PlotsBase" prefHeight="668.0" prefWidth="242.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="URL" prefWidth="75.0" text="Links" />
+            <TableColumn fx:id="cityCol" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="price" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="area" prefWidth="75.0" text="Area" />
+        </columns>
+          <columnResizePolicy>
+              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+          </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#editRow" text="Edit row" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteRow" text="Delete row" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </right>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="addButton" maxWidth="Infinity" mnemonicParsing="false" onAction="#openAddingWindow" prefHeight="26.0" prefWidth="420.0" text="Add new plot" />
+            <Button fx:id="exitButton" maxWidth="Infinity" mnemonicParsing="false" onAction="#closeProgram" prefHeight="26.0" prefWidth="420.0" text="Exit" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+   <top>
+      <GridPane minWidth="700.0" prefHeight="22.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1880.0" minWidth="680.0" prefWidth="1240.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="refresh" maxWidth="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#refresh" prefHeight="32.0" prefWidth="40.0" style="-fx-background-image: Code/FXML/Styles/Refresh-PNG-Picture.png;" text="Refresh" GridPane.columnIndex="1" />
+            <MenuBar minWidth="680.0" prefHeight="29.0" prefWidth="1240.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#refreshDB" text="Refresh database" />
+                        <MenuItem mnemonicParsing="false" onAction="#clearScatter" text="Clear scatter" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <ScatterChart fx:id="scatterChart" prefHeight="668.0" prefWidth="888.0" BorderPane.alignment="CENTER">
+        <xAxis>
+          <NumberAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </ScatterChart>
+   </center>
+</BorderPane>
