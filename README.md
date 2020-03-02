@@ -12,5 +12,8 @@ Program which show charts of plots parsed from [otodom](www.otodom.pl) by [Plots
 * [JavaFX](https://openjfx.io/) - software platform for creating and delivering desktop applications
 * [MariaDB](https://mariadb.org/) - open source relational databases
 
-## Screenshots 
-![ScreenShot](https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png)
+//## Screenshots 
+//![ScreenShot](https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png)
+<div align="center">
+    <img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png" width="400px"</img> 
+</div>
