@@ -13,3 +13,4 @@ Program which show charts of plots parsed from [otodom](www.otodom.pl) by [Plots
 * [MariaDB](https://mariadb.org/) - open source relational databases
 
 ## Screenshots 
+![ScreenShot](https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png)
