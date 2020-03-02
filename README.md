@@ -14,11 +14,11 @@ Program which show charts of plots parsed from [otodom.pl](https://www.otodom.pl
 ## Screenshots 
 <div align="left">
     <figure class="image1">
-        <figcaption>Main window</figcaption>
-        <span><img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png" width="45%" alt="Main window"></span>
+        <figcaption>Main window</figcaption><br>
+        <span><img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png" width="40%" alt="Main window"></span>
     </figure>
     <figure class="image2">
-        <figcaption>Editing window</figcaption>
-        <span><img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/EditPlotPlots.png" width="45%" alt="Editing window"> </span>
+        <figcaption>Editing window</figcaption><br>
+        <span><img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/EditPlotPlots.png" width="40%" alt="Editing window"> </span>
     </figure>
 </div>
