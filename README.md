@@ -15,10 +15,10 @@ Program which show charts of plots parsed from [otodom.pl](https://www.otodom.pl
 <div align="left">
     <figure class="image1">
         <figcaption>Main window</figcaption>
-        <p align="inline"><img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png" width="45%" alt="Main window"></p>
+        <span><img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png" width="45%" alt="Main window"></span>
     </figure>
     <figure class="image2">
         <figcaption>Editing window</figcaption>
-        <p align="inline"><img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/EditPlotPlots.png" width="45%" alt="Editing window"> </p>
+        <span><img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/EditPlotPlots.png" width="45%" alt="Editing window"> </span>
     </figure>
 </div>
