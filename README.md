@@ -13,13 +13,7 @@ Program which show charts of plots parsed from [otodom.pl](https://www.otodom.pl
 
 ## Screenshots 
 ### Main window 
-<div align="left">
-    <img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/MainWindowPlots.png" width="500px" alt="Main window">
-</div>
-    
+[Main window](https://i.imgur.com/2C3K5tp.png)    
 ### Editing window
-<div align="left">
-    <img src="https://github.com/Dimonium-239/PlotsManager/blob/master/Screenshots/EditPlotPlots.png" width="500px" alt="Editing window">
-</div>
-    
+[Editing window](https://i.imgur.com/UidrzJQ.png)    
    
