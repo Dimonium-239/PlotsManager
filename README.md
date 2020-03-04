@@ -4,7 +4,7 @@ Program which show charts of plots parsed from [otodom.pl](https://www.otodom.pl
 
 ## Program can:
 - Show chart of **area *x* price**
-- Show chart of **(price * area)/km_from_centre**
+- Show chart of **(price * area) *x* km_from_centre**
 - Add/edit/delete plot in database
 
 ## Built With
