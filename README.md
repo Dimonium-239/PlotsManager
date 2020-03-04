@@ -14,7 +14,7 @@ Program which show charts of plots parsed from [otodom.pl](https://www.otodom.pl
 ## Screenshots 
 ### Main window 
 <div align="left">
-    <img src="https://i.imgur.com/2C3K5tph.png" title="Main window " />
+    <img src="https://i.imgur.com/2C3K5tph.png" width="300px" alt="Main window ">
 </div>
 ### Editing window
 <div align="left">
