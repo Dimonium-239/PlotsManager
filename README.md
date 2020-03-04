@@ -13,7 +13,6 @@ Program which show charts of plots parsed from [otodom.pl](https://www.otodom.pl
 
 ## Screenshots 
 ### Main window 
-[Main window](https://i.imgur.com/2C3K5tp.png)    
+<a href="https://imgur.com/2C3K5tp"><img src="https://i.imgur.com/2C3K5tp.png" title="source: imgur.com" /></a>
 ### Editing window
-[Editing window](https://i.imgur.com/UidrzJQ.png)    
-   
+<a href="https://imgur.com/UidrzJQ"><img src="https://i.imgur.com/UidrzJQ.png" title="source: imgur.com" /></a>   
